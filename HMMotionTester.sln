@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMMotionTester", "HMMotionTester.csproj", "{2AAC8026-11BB-4051-979C-0C2C40DE6CD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AAC8026-11BB-4051-979C-0C2C40DE6CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAC8026-11BB-4051-979C-0C2C40DE6CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAC8026-11BB-4051-979C-0C2C40DE6CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAC8026-11BB-4051-979C-0C2C40DE6CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88452986-725D-410B-B342-189F5FD999CD}
+	EndGlobalSection
+EndGlobal
