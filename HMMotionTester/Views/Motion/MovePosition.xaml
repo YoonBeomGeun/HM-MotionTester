@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="HMMotionTester.Views.Motion.MovePosition"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HMMotionTester.Views.Motion"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="700">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Height="350" HorizontalAlignment="Stretch" Width="700" Margin="0,5,0,0">
+        <StackPanel Name="MovePosition">
+            <TextBlock Text="MovePosition 설정 화면" FontSize="16" FontWeight="Bold"/>
+            <!-- MovePosition 전용 UI 구성 요소 추가 -->
+            <TextBlock Text="여기에 MovePosition 관련 설정들을 배치합니다."/>
+            <TextBox Text="1000" />
+        </StackPanel>
+    </ScrollViewer>
+    
+</UserControl>
