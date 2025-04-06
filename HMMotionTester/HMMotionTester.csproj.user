@@ -2,12 +2,78 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Views\Motion\Circular.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\DSM.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\FlipperDown.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\FlipperUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\MoveInterp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\PathInterpDirectControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\PathInterpFileInterface.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\MovePnP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Motion\MovePosition.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\MoveVelocity.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\MoveVibration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Motion\SLM.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Motion\Circular.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\DSM.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\FlipperDown.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\FlipperUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\MoveInterp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\PathInterpDirectControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\PathInterpFileInterface.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\MovePnP.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Motion\MovePosition.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\MoveVelocity.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\MoveVibration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Motion\SLM.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HMMotionTester.Interface;
 
 namespace HMMotionTester.Views.Motion
 {
@@ -28,7 +27,7 @@ namespace HMMotionTester.Views.Motion
         }
         public string GetMotionData()
         {
-            return MovePosition.Name; // TextBox 값 반환
+            return RunMovePosition.Name; // TextBox 값 반환
         }
         public void RunMotion()
         {

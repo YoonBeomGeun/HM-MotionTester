@@ -8,7 +8,7 @@
       d:DesignHeight="350" d:DesignWidth="700">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" Height="350" HorizontalAlignment="Stretch" Width="700" Margin="0,5,0,0">
-        <StackPanel Name="MovePosition">
+        <StackPanel Name="RunMovePosition">
             <TextBlock Text="MovePosition 설정 화면" FontSize="16" FontWeight="Bold"/>
             <!-- MovePosition 전용 UI 구성 요소 추가 -->
             <TextBlock Text="여기에 MovePosition 관련 설정들을 배치합니다."/>

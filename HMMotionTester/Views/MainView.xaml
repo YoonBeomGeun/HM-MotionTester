@@ -65,11 +65,11 @@
                             <RowDefinition Height="25"/>
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
-                        
+
                         <!-- 에러 메시지 -->
                         <TextBlock Grid.Row="0" Text="Error Message" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Border Grid.Row="1" BorderThickness="1" BorderBrush="RED" Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <TextBlock Text="Motor is not registered" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="ErrorText" Text="{Binding ErrorTextMessage}" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </Grid>
                 </Grid>
@@ -93,7 +93,7 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- 왼쪽 로고 -->
-                        <Image Source="Resources/HanmiLogo.png" Grid.Column="0" Width="80" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" />
+                        <Image Source="Resources//HanmiLogo.png" Grid.Column="0" Width="80" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" />
                         <!-- Control 버튼 -->
                         <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="200,0,200,0">
                             <dxwui:AppBarButton Label="Start" Click="StartButton_Click" />
@@ -143,7 +143,7 @@
                             <ComboBoxItem Content="Master 0"/>
                             <ComboBoxItem Content="Master 1"/>
                         </ComboBox>
-                        
+
                         <ScrollViewer VerticalScrollBarVisibility="Auto" Height="350" HorizontalAlignment="Center" Width="130" Margin="0,10,0,0">
                             <StackPanel Name="MotionPanel">
                                 <Button Content="MovePosition" Height="25" Margin="2" Background="White" FontWeight="Bold" Foreground="#001A66"/>
@@ -166,28 +166,66 @@
                     <dxa:AccordionControl HeaderContent="Set Motion Parameter">
                         <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
                             <TextBlock Text="✔️ Moving Axis: " Width="103" HorizontalAlignment="Left" FontWeight="Bold" />
-                            <ComboBox Name="Moving_Axis" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                            <ComboBox Name="Moving_Axis" ItemsSource="{Binding Motors}" SelectedItem="{Binding SelectedMovingAxis, Mode=TwoWay}" DisplayMemberPath="AxisName" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                         </StackPanel>
                         <Grid Name="CoordinatesGrid" Visibility="Visible">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="7*"/>
+                                <ColumnDefinition Width="9*"/>
+                                <ColumnDefinition Width="64*"/>
+                            </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="1*"/>
                             </Grid.RowDefinitions>
-                            
-                            <TextBlock Grid.Row="0" Text="✔️ Set Coordinates Axes" Width="150" HorizontalAlignment="Left" FontWeight="Bold" Margin="0,10,0,0" />
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0, 10, 0, 0">
+
+                            <TextBlock Grid.Row="0" Text="✔️ Set Coordinates Axes" Width="150" HorizontalAlignment="Left" FontWeight="Bold" Margin="0,10,0,32" Grid.ColumnSpan="3" Grid.RowSpan="2" />
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0, 10, 0, 0" Grid.ColumnSpan="3">
                                 <TextBlock Text="Transfer Axis 1: " Width="90" HorizontalAlignment="Left" Margin="22,0,0,0" />
-                                <ComboBox Name="TransferAixs1" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                <ComboBox Name="TransferAixs1" ItemsSource="{Binding Motors}" SelectedItem="{Binding SelectedTransferAxis1, Mode=TwoWay}" DisplayMemberPath="AxisName" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <ComboBox.ItemContainerStyle>
+                                        <Style TargetType="ComboBoxItem">
+                                            <Setter Property="IsEnabled" Value="{Binding IsSelectable}" />
+                                        </Style>
+                                    </ComboBox.ItemContainerStyle>
+                                    <!--<ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding AxisName}">
+                                                <TextBlock.Style>
+                                                    <Style TargetType="TextBlock">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsSelectable}" Value="False">
+                                                                <Setter Property="Foreground" Value="Gray" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>-->
+                                </ComboBox>
                                 <TextBlock Text="Transfer Axis 2: " Width="90" HorizontalAlignment="Left" Margin="50,0,0,0" />
-                                <ComboBox Name="TransferAxis2" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                <ComboBox Name="TransferAxis2" ItemsSource="{Binding Motors}" SelectedItem="{Binding SelectedTransferAxis2, Mode=TwoWay}" DisplayMemberPath="AxisName" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <ComboBox.ItemContainerStyle>
+                                        <Style TargetType="ComboBoxItem">
+                                            <Setter Property="IsEnabled" Value="{Binding IsSelectable}" />
+                                        </Style>
+                                    </ComboBox.ItemContainerStyle>
+                                </ComboBox>
                                 <TextBlock Text="ZMove Axis: " Width="73" HorizontalAlignment="Left" Margin="50,0,0,0" />
-                                <ComboBox Name="ZMoveAxis" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                <ComboBox Name="ZMoveAxis" ItemsSource="{Binding Motors}" SelectedItem="{Binding SelectedZAxis, Mode=TwoWay}" DisplayMemberPath="AxisName" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <ComboBox.ItemContainerStyle>
+                                        <Style TargetType="ComboBoxItem">
+                                            <Setter Property="IsEnabled" Value="{Binding IsSelectable}" />
+                                        </Style>
+                                    </ComboBox.ItemContainerStyle>
+                                </ComboBox>
                             </StackPanel>
                         </Grid>
 
                         <!-- 동적으로 모션별 UI를 로드할 영역 -->
                         <ContentControl x:Name="MotionContentControl" Margin="0,10,0,0"/>
-                        
+
                         <!--<dxwui:NavigationFrame AnimationType="SlideHorizontal" AllowMerging="True" VerticalAlignment="Stretch">
                             <dxmvvm:Interaction.Behaviors>
                                 <dxwuin:FrameDocumentUIService ShowSplashScreen="True" x:Name="FrameDocumentManagerService">
@@ -208,7 +246,9 @@
                                 </dxwuin:FrameDocumentUIService>
                             </dxmvvm:Interaction.Behaviors>
                             
-                            --><!-- Tab 영역 --><!--
+                            -->
+                        <!-- Tab 영역 -->
+                        <!--
                             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" Height="35">
                                 <dx:DXTabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedIndex="0">
                                     <dx:DXTabItem Header="MovePosition">

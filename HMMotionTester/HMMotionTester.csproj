@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Views\Resources\HanmiLogo.jpeg" />
+    <None Remove="Views\Resources\HanmiLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Views\Resources\HanmiLogo.jpeg" />
+    <Content Include="Views\Resources\HanmiLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
