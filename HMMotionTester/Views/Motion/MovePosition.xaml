@@ -12,7 +12,27 @@
             <TextBlock Text="MovePosition 설정 화면" FontSize="16" FontWeight="Bold"/>
             <!-- MovePosition 전용 UI 구성 요소 추가 -->
             <TextBlock Text="여기에 MovePosition 관련 설정들을 배치합니다."/>
-            <TextBox Text="1000" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+            </Grid>
         </StackPanel>
     </ScrollViewer>
     

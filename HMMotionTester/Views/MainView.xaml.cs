@@ -28,14 +28,14 @@ namespace HMMotionTester.Views
     public partial class MainView : UserControl
     {
 
-        public string WmxOptionIniPath = "";
+        public string WmxOptionIniPath = "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Resources\\AxisName.txt";
         //MotorList motorLIst = new MotorList();
         
         public MainView()
         {
             InitializeComponent();
             //string path = @"C:\경로\WmxOption.ini";
-            //MotorList.Instance.LoadAxisNames(path);
+            MotorList.Instance.LoadAxisNames(WmxOptionIniPath);
             this.DataContext = MotorList.Instance;
 
 
@@ -95,8 +95,8 @@ namespace HMMotionTester.Views
                         CoordinatesGrid.Visibility = Visibility.Collapsed;
                         MotionContentControl.Margin = new Thickness(0, -20, 0, 0);
                         break;
-                    case "MoveInterp":
-                        MotionContentControl.Content = new MoveInterp();
+                    case "MoveLinearInterp":
+                        MotionContentControl.Content = new MoveLinearInterp();
                         CoordinatesGrid.Visibility = Visibility.Visible;
                         MotionContentControl.Margin = new Thickness(0, 5, 0, 0);
                         break;
@@ -120,12 +120,12 @@ namespace HMMotionTester.Views
                         CoordinatesGrid.Visibility = Visibility.Visible;
                         MotionContentControl.Margin = new Thickness(0, 5, 0, 0);
                         break;
-                    case "PathInterpFileIneterface":
+                    case "PathInterpFileInterface":
                         MotionContentControl.Content = new PathInterpFileInterface();
                         CoordinatesGrid.Visibility = Visibility.Visible;
                         MotionContentControl.Margin = new Thickness(0, 5, 0, 0);
                         break;
-                    case "Circular":
+                    case "Circular~":
                         MotionContentControl.Content = new Circular();
                         CoordinatesGrid.Visibility = Visibility.Visible;
                         MotionContentControl.Margin = new Thickness(0, 5, 0, 0);

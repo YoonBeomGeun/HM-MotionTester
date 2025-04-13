@@ -39,6 +39,18 @@ namespace HMMotionTester.ViewModels
             }
         }
 
+        private int _usingAxisCount;
+        public int UsingAxisCount
+        {
+            get => _usingAxisCount;
+            set
+            {
+                _usingAxisCount = value;
+                OnPropertyChanged(nameof(UsingAxisCount));
+                UpdateAxisEnable();
+            }
+        }
+
         public ObservableCollection<Motor> Motors { get; set; }
 
         private Motor _selectedMovingAxis;
@@ -52,21 +64,45 @@ namespace HMMotionTester.ViewModels
             }
         }
 
+        private bool _isAxis1Enabled = true;
+        public bool IsAxis1Enabled
+        {
+            get => _isAxis1Enabled;
+            set { _isAxis1Enabled = value; OnPropertyChanged(nameof(IsAxis1Enabled)); }
+        }
+
+        private bool _isAxis2Enabled;
+        public bool IsAxis2Enabled
+        {
+            get => _isAxis2Enabled;
+            set { _isAxis2Enabled = value; OnPropertyChanged(nameof(IsAxis2Enabled)); }
+        }
+
+        private bool _isAxis3Enabled;
+        public bool IsAxis3Enabled
+        {
+            get => _isAxis3Enabled;
+            set { _isAxis3Enabled = value; OnPropertyChanged(nameof(IsAxis3Enabled)); }
+        }
+
         private Motor _selectedTransferAxis1;
         public Motor SelectedTransferAxis1
         {
             get => _selectedTransferAxis1;
             set
             {
-                if (value == null)
-                    return;
+                if (value == null) return;
 
                 if (value == SelectedTransferAxis2 || value == SelectedZAxis)
                 {
-                    ErrorTextMessage = $"{value.AxisName}은(는) 이미 선택된 Axis입니다.";
+                    ErrorTextMessage = $"{value.AxisName}은 이미 선택된 Axis 입니다.";
                     OnPropertyChanged(nameof(ErrorTextMessage));
 
-                    // ComboBox의 선택을 다음 프레임에서 null로 되돌리기
+                    //System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                    //{
+                    //    SelectedTransferAxis1 = null;
+                    //    OnPropertyChanged(nameof(SelectedTransferAxis1));
+                    //}));
                     SelectedTransferAxis1 = null;
                     OnPropertyChanged(nameof(SelectedTransferAxis1));
                 }
@@ -87,9 +123,29 @@ namespace HMMotionTester.ViewModels
             get => _selectedTransferAxis2;
             set
             {
-                _selectedTransferAxis2 = value;
-                OnPropertyChanged(nameof(SelectedTransferAxis2));
-                UpdateSelectableMotors();
+                if (value == null) return;
+
+                if (value == SelectedTransferAxis1 || value == SelectedZAxis)
+                {
+                    ErrorTextMessage = $"{value.AxisName}은 이미 선택된 Axis 입니다.";
+                    OnPropertyChanged(nameof(ErrorTextMessage));
+
+                    //System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                    //{
+                    //    SelectedTransferAxis1 = null;
+                    //    OnPropertyChanged(nameof(SelectedTransferAxis1));
+                    //}));
+                    SelectedTransferAxis2 = null;
+                    OnPropertyChanged(nameof(SelectedTransferAxis2));
+                }
+                else
+                {
+                    _selectedTransferAxis2 = value;
+                    ErrorTextMessage = "";
+                    OnPropertyChanged(nameof(ErrorTextMessage));
+                    OnPropertyChanged(nameof(SelectedTransferAxis2));
+                    UpdateSelectableMotors();
+                }
             }
         }
 
@@ -99,14 +155,36 @@ namespace HMMotionTester.ViewModels
             get => _selectedZAxis;
             set
             {
-                _selectedZAxis = value;
-                OnPropertyChanged(nameof(SelectedZAxis));
-                UpdateSelectableMotors();
+                if (value == null) return;
+
+                if (value == SelectedTransferAxis1 || value == SelectedTransferAxis2)
+                {
+                    ErrorTextMessage = $"{value.AxisName}은 이미 선택된 Axis 입니다.";
+                    OnPropertyChanged(nameof(ErrorTextMessage));
+
+                    //System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                    //{
+                    //    SelectedTransferAxis1 = null;
+                    //    OnPropertyChanged(nameof(SelectedTransferAxis1));
+                    //}));
+                    SelectedZAxis = null;
+                    OnPropertyChanged(nameof(SelectedZAxis));
+                }
+                else
+                {
+                    _selectedZAxis = value;
+                    ErrorTextMessage = "";
+                    OnPropertyChanged(nameof(ErrorTextMessage));
+                    OnPropertyChanged(nameof(SelectedZAxis));
+                    UpdateSelectableMotors();
+                }
             }
         }
-        //===============================================================================
+        //===============================================================================================
         public MotorList()
         {
+            UsingAxisCount = 1;
+            UpdateAxisEnable();
             // 비어있을 때만
             if (Motors == null || Motors.Count == 0)
             {
@@ -120,12 +198,27 @@ namespace HMMotionTester.ViewModels
                     });
                 }
             }
+            //Motors = new ObservableCollection<Motor>();  // ⭐ 조건 없이 먼저 초기화
+
+            //for (int i = 0; i < MASTER_MAX_AXIS_NUM; i++)
+            //{
+            //    Motors.Add(new Motor
+            //    {
+            //        AxisName = "Axis " + i,
+            //        AxisNum = i,
+            //    });
+            //}
+
+            //UsingAxisCount = 1;
+            //UpdateAxisEnable();
         }
-        //===============================================================================
+        //===============================================================================================
         private void UpdateSelectableMotors()
         {
-            var selectedAxisNums = new HashSet<int>();
+            if (Motors == null)
+                return;
 
+            var selectedAxisNums = new HashSet<int>();
             if (_selectedTransferAxis1 != null)
                 selectedAxisNums.Add(_selectedTransferAxis1.AxisNum);
             if (_selectedTransferAxis2 != null)
@@ -138,7 +231,7 @@ namespace HMMotionTester.ViewModels
                 motor.IsSelectable = !selectedAxisNums.Contains(motor.AxisNum);
             }
         }
-        //===============================================================================
+        //===============================================================================================
         public void LoadAxisNames(string iniFilePath)
         {
             for (int i = 0; i < Motors.Count; i++)
@@ -156,7 +249,6 @@ namespace HMMotionTester.ViewModels
                 {
                     int axisIndex = int.Parse(match.Groups[1].Value);
                     string axisName = match.Groups[2].Value;
-
                     if (axisIndex >= 0 && axisIndex < Motors.Count)
                     {
                         Motors[axisIndex].AxisName = $"{axisIndex}: {axisName}";
@@ -164,7 +256,33 @@ namespace HMMotionTester.ViewModels
                 }
             }
         }
-        //===============================================================================
+        //===============================================================================================
+        private void UpdateAxisEnable()
+        {
+            IsAxis1Enabled = UsingAxisCount >= 1;
+            if (!IsAxis1Enabled)
+            {
+                SelectedTransferAxis1 = null;
+                OnPropertyChanged(nameof(SelectedTransferAxis1));
+            }
+
+            IsAxis2Enabled = UsingAxisCount >= 2;
+            if (!IsAxis2Enabled)
+            {
+                SelectedTransferAxis2 = null;
+                OnPropertyChanged(nameof(SelectedTransferAxis2));
+            }
+
+            IsAxis3Enabled = UsingAxisCount >= 3;
+            if (!IsAxis3Enabled)
+            {
+                SelectedZAxis = null;
+                OnPropertyChanged(nameof(SelectedZAxis));
+            }
+
+            UpdateSelectableMotors();
+        }
+        //===============================================================================================
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

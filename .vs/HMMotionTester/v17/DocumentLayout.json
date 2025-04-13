@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\viewmodels\\motorlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -15,12 +19,16 @@
       "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\views\\mainview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\views\\motion\\movelinearinterp.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\views\\motion\\movelinearinterp.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\views\\motion\\moveposition.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\views\\motion\\moveposition.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|c:\\users\\pxban\\desktop\\hm-motiontester\\hmmotiontester\\views\\motion\\movelinearinterp.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{144670CB-6396-488C-A76D-2E03A3B69E78}|HMMotionTester\\HMMotionTester.csproj|solutionrelative:hmmotiontester\\views\\motion\\movelinearinterp.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 581,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,27 +55,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "HMMotionTester\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "HMMotionTester\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T09:01:27.255Z",
+              "Title": "MoveLinearInterp.xaml",
+              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml",
+              "RelativeDocumentMoniker": "HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml",
+              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml",
+              "RelativeToolTip": "HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-12T06:41:34.206Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "MovePosition.xaml",
+              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Motion\\MovePosition.xaml",
+              "RelativeDocumentMoniker": "HMMotionTester\\Views\\Motion\\MovePosition.xaml",
+              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Motion\\MovePosition.xaml",
+              "RelativeToolTip": "HMMotionTester\\Views\\Motion\\MovePosition.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-12T06:36:59.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Motor.cs",
               "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Models\\Motor.cs",
               "RelativeDocumentMoniker": "HMMotionTester\\Models\\Motor.cs",
               "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Models\\Motor.cs",
               "RelativeToolTip": "HMMotionTester\\Models\\Motor.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAcwCwAAABZAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T08:54:47.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainView.xaml",
+              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml",
+              "RelativeDocumentMoniker": "HMMotionTester\\Views\\MainView.xaml",
+              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml",
+              "RelativeToolTip": "HMMotionTester\\Views\\MainView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-06T08:27:14.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml.cs",
+              "RelativeDocumentMoniker": "HMMotionTester\\Views\\MainView.xaml.cs",
+              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml.cs",
+              "RelativeToolTip": "HMMotionTester\\Views\\MainView.xaml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T08:28:22.146Z",
               "EditorCaption": ""
             },
             {
@@ -78,35 +122,22 @@
               "RelativeDocumentMoniker": "HMMotionTester\\ViewModels\\MotorList.cs",
               "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\ViewModels\\MotorList.cs",
               "RelativeToolTip": "HMMotionTester\\ViewModels\\MotorList.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAmwDkAAAAqAAAA",
+              "ViewState": "AQIAANAAAAAAAAAAAAAmwN0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T08:34:28.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml.cs",
-              "RelativeDocumentMoniker": "HMMotionTester\\Views\\MainView.xaml.cs",
-              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml.cs",
-              "RelativeToolTip": "HMMotionTester\\Views\\MainView.xaml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAIAAAA",
+              "DocumentIndex": 6,
+              "Title": "MoveLinearInterp.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml.cs",
+              "RelativeDocumentMoniker": "HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml.cs",
+              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml.cs",
+              "RelativeToolTip": "HMMotionTester\\Views\\Motion\\MoveLinearInterp.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T08:28:22.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainView.xaml",
-              "DocumentMoniker": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml",
-              "RelativeDocumentMoniker": "HMMotionTester\\Views\\MainView.xaml",
-              "ToolTip": "C:\\Users\\pxban\\Desktop\\HM-MotionTester\\HMMotionTester\\Views\\MainView.xaml",
-              "RelativeToolTip": "HMMotionTester\\Views\\MainView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-06T08:27:14.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T06:41:53.271Z"
             }
           ]
         }

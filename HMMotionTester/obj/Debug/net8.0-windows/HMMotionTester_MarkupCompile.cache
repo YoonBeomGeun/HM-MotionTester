@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\App.xaml
-14-1636694755
+14-812664017
 11192557457
-201389891277
+20-1367240300
 226920315139
-MainWindow.xaml;Views\MainView.xaml;Views\Motion\Circular.xaml;Views\Motion\DSM.xaml;Views\Motion\FlipperDown.xaml;Views\Motion\FlipperUp.xaml;Views\Motion\MoveInterp.xaml;Views\Motion\MovePnP.xaml;Views\Motion\MovePosition.xaml;Views\Motion\MoveVelocity.xaml;Views\Motion\MoveVibration.xaml;Views\Motion\PathInterpDirectControl.xaml;Views\Motion\PathInterpFileInterface.xaml;Views\Motion\SLM.xaml;
+MainWindow.xaml;Views\MainView.xaml;Views\Motion\Circular.xaml;Views\Motion\DSM.xaml;Views\Motion\FlipperDown.xaml;Views\Motion\FlipperUp.xaml;Views\Motion\MoveLinearInterp.xaml;Views\Motion\MovePnP.xaml;Views\Motion\MovePosition.xaml;Views\Motion\MoveVelocity.xaml;Views\Motion\MoveVibration.xaml;Views\Motion\PathInterpDirectControl.xaml;Views\Motion\PathInterpFileInterface.xaml;Views\Motion\SLM.xaml;
 
 False
 

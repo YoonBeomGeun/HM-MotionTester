@@ -165,7 +165,6 @@ C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\V
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\DSM.g.cs
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\FlipperDown.g.cs
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\FlipperUp.g.cs
-C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveInterp.g.cs
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MovePnP.g.cs
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveVelocity.g.cs
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveVibration.g.cs
@@ -174,7 +173,6 @@ C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\V
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\DSM.baml
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\FlipperDown.baml
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\FlipperUp.baml
-C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveInterp.baml
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MovePnP.baml
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveVelocity.baml
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveVibration.baml
@@ -183,3 +181,5 @@ C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\V
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\PathInterpFileInterface.g.cs
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\PathInterpDirectControl.baml
 C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\PathInterpFileInterface.baml
+C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveLinearInterp.g.cs
+C:\Users\pxban\Desktop\HM-MotionTester\HMMotionTester\obj\Debug\net8.0-windows\Views\Motion\MoveLinearInterp.baml

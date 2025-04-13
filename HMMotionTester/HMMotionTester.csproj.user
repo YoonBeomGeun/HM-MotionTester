@@ -14,7 +14,7 @@
     <Compile Update="Views\Motion\FlipperUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Motion\MoveInterp.xaml.cs">
+    <Compile Update="Views\Motion\MoveLinearInterp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Motion\PathInterpDirectControl.xaml.cs">
@@ -52,7 +52,7 @@
     <Page Update="Views\Motion\FlipperUp.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Motion\MoveInterp.xaml">
+    <Page Update="Views\Motion\MoveLinearInterp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Motion\PathInterpDirectControl.xaml">

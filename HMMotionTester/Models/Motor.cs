@@ -9,8 +9,11 @@ namespace HMMotionTester.Models
 {
     public class Motor : INotifyPropertyChanged
     {
-        private int nAxisNum;
+        public int MAX_AXIS_NUM = 128;
+        public int MASTER_MAX_AXIS_NUM = 64;
+
         private string sAxisName;
+        private int nAxisNum;
         private bool _isSelectable = true;
 
         public int AxisNum
@@ -22,7 +25,6 @@ namespace HMMotionTester.Models
                 OnPropertyChanged(nameof(AxisNum));
             }
         }
-
         public string AxisName
         {
             get => sAxisName;
@@ -32,7 +34,7 @@ namespace HMMotionTester.Models
                 OnPropertyChanged(nameof(AxisName));
             }
         }
-        
+
         public bool IsSelectable
         {
             get => _isSelectable;
@@ -42,7 +44,7 @@ namespace HMMotionTester.Models
                 OnPropertyChanged(nameof(IsSelectable));
             }
         }
-        //===============================================================================
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
